@@ -1,6 +1,6 @@
 import "./styles.css";
 import { inputField, submitButton } from "./querySelector";
-import { weatherDesc } from "./domDisplay";
+import { weatherDesc, temp, feelsLike } from "./domDisplay";
 
 submitButton();
 
@@ -21,8 +21,8 @@ export function getWeather(location) {
         // Getting the data we need (subject to change)
         console.log(response.currentConditions);
         weatherDesc(response.currentConditions.conditions);
-        console.log(response.currentConditions.temp);
-        console.log(response.currentConditions.feelslike);
+        temp(response.currentConditions.temp);
+        feelsLike(response.currentConditions.feelslike);
       })
 
       .catch(err => {

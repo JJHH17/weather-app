@@ -4,7 +4,25 @@ import { container } from "./querySelector";
 export function weatherDesc(description) {
     let descContainer = document.createElement("div");
 
-    descContainer.textContent = description;
+    descContainer.textContent = "Weather: " + description;
 
     container().appendChild(descContainer);
 }
+
+export function temp(temperature) {
+    let tempContainer = document.createElement("div");
+
+    tempContainer.textContent = "Temperature: " + temperature;
+
+    container().appendChild(tempContainer);
+}
+
+export function feelsLike(tempFeel) {
+    let tempFeelContainer = document.createElement("div");
+
+    tempFeelContainer.textContent = "Feels like: " + tempFeel;
+
+    container().appendChild(tempFeelContainer);
+}
+
+// Responsible for clearing DOM elements when API is called
