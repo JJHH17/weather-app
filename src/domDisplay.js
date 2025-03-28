@@ -1,4 +1,3 @@
-import { container } from "./querySelector";
 
 // Responsible for displaying items via DOM
 export function weatherDesc(description) {
@@ -19,4 +18,8 @@ export function feelsLike(tempFeel) {
     tempFeelContainer.textContent = "Feels like: " + tempFeel;
 }
 
-// Responsible for clearing DOM elements when API is called
+export function callLocation(area) {
+    let location = document.querySelector("#callLocation");
+
+    location.textContent = area;
+}
