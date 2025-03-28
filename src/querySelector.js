@@ -1,8 +1,11 @@
 import { getWeather } from "./index";
 
+// Responsible for getting DOM elements
+
 // Gets input field
 export function inputField() {
     const input = document.querySelector("#location");
+
     return input;
 }
 
@@ -18,6 +21,7 @@ export function submitButton(location) {
     return submitBtn;
 }
 
-// User fills out form
-// Presses button
-// Form input is fed into API function
+export function container() {
+    const container = document.querySelector("#appContainer");
+    return container;
+}
