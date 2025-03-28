@@ -1,19 +1,21 @@
 import "./styles.css";
 import { inputField, submitButton } from "./querySelector";
 
-// Takes input from user
-
+submitButton();
 
 // API call function
-function getWeather(location) { 
+export function getWeather(location) { 
     fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=us&key=WE5SWL7PXQVWZVJPQW6JNH35P&contentType=json`, {
         "method": "GET",
+        "mode": "cors",
         "headers": {
         }
         })
+        
       .then(function(response) {
         return response.json();
       })
+
       .then(function(response) {
         // Getting the data we need (subject to change)
         console.log(response.currentConditions);
@@ -21,10 +23,9 @@ function getWeather(location) {
         console.log(response.currentConditions.temp);
         console.log(response.currentConditions.feelslike);
       })
+
       .catch(err => {
         console.error(err);
+        console.log("Please enter a valid entry");
       });
-      
 }
-
-console.log(getWeather("Zurich"));
