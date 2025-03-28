@@ -10,7 +10,7 @@ export function inputField() {
 }
 
 // Gets submit button
-export function submitButton(location) {
+export function submitButton() {
     const submitBtn = document.querySelector("#submitBtn");
     const search = inputField();
 

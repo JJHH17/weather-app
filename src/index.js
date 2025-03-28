@@ -20,8 +20,13 @@ export function getWeather(location) {
       .then(function(response) {
         // Getting the data we need (subject to change)
         console.log(response.currentConditions);
+
         weatherDesc(response.currentConditions.conditions);
+
+
         temp(response.currentConditions.temp);
+
+
         feelsLike(response.currentConditions.feelslike);
       })
 
