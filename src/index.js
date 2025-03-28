@@ -1,5 +1,10 @@
 import "./styles.css";
+import { inputField, submitButton } from "./querySelector";
 
+// Takes input from user
+
+
+// API call function
 function getWeather(location) { 
     fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=us&key=WE5SWL7PXQVWZVJPQW6JNH35P&contentType=json`, {
         "method": "GET",

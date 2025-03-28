@@ -23,3 +23,9 @@
 #title {
     text-align: center;
 }
+
+#collectInput {
+    position: relative;
+    top: 30%;
+    left: 30%
+}
