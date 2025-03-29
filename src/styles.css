@@ -24,3 +24,7 @@
 #title {
     text-align: center;
 }
+
+#loadingScreen {
+    display: none;
+}

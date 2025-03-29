@@ -1,5 +1,5 @@
 import "./styles.css";
-import { inputField, submitButton } from "./querySelector";
+import { submitButton, loadingItem } from "./querySelector";
 import { weatherDesc, temp, feelsLike, callLocation } from "./domDisplay";
 
 submitButton();
@@ -14,12 +14,17 @@ export function getWeather(location) {
         })
         
       .then(function(response) {
+        loadingItem().style.display = "block";
         return response.json();
       })
 
       .then(function(response) {
-        // Getting the data we need (subject to change)
-        console.log(response.resolvedAddress);
+
+        // Removing loading elements
+        loadingItem().style.display = "none";
+
+        // Getting the data we need
+        console.log(response);
 
         callLocation(response.resolvedAddress);
 

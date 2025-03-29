@@ -25,3 +25,8 @@ export function container() {
     const container = document.querySelector("#appContainer");
     return container;
 }
+
+export function loadingItem() {
+    const loadingElement = document.querySelector("#loadingScreen");
+    return loadingElement;
+}
