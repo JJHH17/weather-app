@@ -62,6 +62,6 @@
 }
 
 #weatherIcon {
-    display: none;
+    display: block;
     grid-row: 3/4;
 }

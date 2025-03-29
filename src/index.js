@@ -1,6 +1,6 @@
 import "./styles.css";
 import { submitButton, loadingItem } from "./querySelector";
-import { weatherDesc, temp, feelsLike, callLocation } from "./domDisplay";
+import { weatherDesc, temp, feelsLike, callLocation, getIcon } from "./domDisplay";
 
 submitButton();
 
@@ -30,9 +30,9 @@ export function getWeather(location) {
 
         weatherDesc(response.currentConditions.conditions);
 
+        getIcon(response.currentConditions.icon);
 
         temp(response.currentConditions.temp);
-
 
         feelsLike(response.currentConditions.feelslike);
       })
