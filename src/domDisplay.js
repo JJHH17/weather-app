@@ -23,9 +23,3 @@ export function callLocation(area) {
 
     location.textContent = area;
 }
-
-export function getIcon(icon) {
-    let iconHolder = document.querySelector("#weatherIcon");
-
-    iconHolder.src = `https://weather.visualcrossing.com/s/icons/${icon}.png`;
-}

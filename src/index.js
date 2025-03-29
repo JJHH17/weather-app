@@ -1,6 +1,6 @@
 import "./styles.css";
 import { submitButton, loadingItem } from "./querySelector";
-import { weatherDesc, temp, feelsLike, callLocation, getIcon } from "./domDisplay";
+import { weatherDesc, temp, feelsLike, callLocation } from "./domDisplay";
 
 submitButton();
 
@@ -30,8 +30,6 @@ export function getWeather(location) {
 
         weatherDesc(response.currentConditions.conditions);
 
-        getIcon(response.currentConditions.icon);
-
         temp(response.currentConditions.temp);
 
         feelsLike(response.currentConditions.feelslike);
@@ -39,6 +37,7 @@ export function getWeather(location) {
 
       .catch(err => {
         console.error(err);
-        console.log("Please enter a valid entry");
+        alert("Please enter a valid entry");
+        loadingItem().style.display = "none";
       });
 }
