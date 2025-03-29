@@ -19,6 +19,9 @@
     width: 40%;
     background-color: white;
     border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.5fr repeat(3, 1fr);
 }
 
 #title {
@@ -27,4 +30,38 @@
 
 #loadingScreen {
     display: none;
+}
+
+#collectInput {
+    grid-column: 2/3;
+    text-align: center;
+}
+
+#callLocation {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    text-align: center;
+}
+
+#temp {
+    grid-row: 3/3;
+    grid-column: 1/2;
+    text-align: center;
+}
+
+#tempFeel {
+    grid-row: 3/4;
+    grid-column: 3/3;
+    text-align: center;
+}
+
+#description {
+    grid-row: 4/4;
+    grid-column: 2/3;
+    text-align: center;
+}
+
+#weatherIcon {
+    display: none;
+    grid-row: 3/4;
 }
