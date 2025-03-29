@@ -17,7 +17,7 @@
     left: 30%;
     height: 50%;
     width: 40%;
-    background-image: linear-gradient(#03d3fc, white, #03d3fc);
+    background-image: linear-gradient(#03d3fc, #ebdb34, #03d3fc);
     border-radius: 25px;
     border: 1px solid black;
     display: grid;
