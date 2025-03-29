@@ -8,28 +8,32 @@
     left: 0%;
     height: 100%;
     width: 100%;
-    background-color: pink;
+    background-color: #03d3fc;
 }
 
 #appContainer {
     position: absolute;
     top: 10%;
     left: 30%;
-    height: 75%;
+    height: 50%;
     width: 40%;
-    background-color: white;
+    background-image: linear-gradient(#03d3fc, white, #03d3fc);
+    border-radius: 25px;
     border: 1px solid black;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 0.5fr repeat(3, 1fr);
+    grid-template-rows: 0.5fr repeat(2, 1fr);
+
 }
 
 #title {
     text-align: center;
+    color: #ebdb34;
 }
 
 #loadingScreen {
     display: none;
+    text-align: center;
 }
 
 #collectInput {
@@ -39,29 +43,37 @@
 
 #callLocation {
     grid-row: 2/3;
-    grid-column: 2/3;
+    grid-column: 1/4;
     text-align: center;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    margin-top: 30px;
+    padding-top: 15px;
 }
 
 #temp {
     grid-row: 3/3;
     grid-column: 1/2;
     text-align: center;
+    padding-top: 15px;
 }
 
 #tempFeel {
     grid-row: 3/4;
     grid-column: 3/3;
     text-align: center;
+    padding-top: 15px;
 }
 
 #description {
-    grid-row: 4/4;
+    grid-row: 3/4;
     grid-column: 2/3;
     text-align: center;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    padding-top: 15px;
 }
 
-#weatherIcon {
-    display: block;
-    grid-row: 3/4;
+#location {
+    text-align: center;
 }
