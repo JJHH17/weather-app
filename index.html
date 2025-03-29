@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+<script defer src="main.js"></script></head>
+<body>
+    <div id="mainContainer">
+        <h1 id="title">Weather.js</h1>
+        <div id="loadingScreen">Loading Data...</div>
+
+        <div id="appContainer">
+
+            <form id="collectInput">
+                <label for="location">Enter a Location:</label><br>
+                <input type="text" id="location" name="location"><br>
+                <button type="button" id="submitBtn">Submit</button>
+            </form>
+
+            <div id="callLocation"></div>
+            <div id="description"></div>
+            <div id="temp"></div>
+            <div id="tempFeel"></div>
+        </div>
+    </div>
+</body>
+</html>
